@@ -1,0 +1,18 @@
+<div class="example-boundary" style="position:relative; overflow:hidden">
+  <div style="background: red" [ngStyle]="{height:height+'%'}">
+    split-view works!
+  </div>
+  <hr
+    style="border:3px double black; position:fixed;top:50%;left:0;right:0;transform:translateY(-50%); background:white"
+    cdkDrag
+    cdkDragLockAxis="y"
+    (cdkDragMoved)="cdkDragMovedHandler($event)"
+  />
+  <div style="background: blue" [ngStyle]="{height:100 - height+'%'}">
+    split-view works!
+  </div>
+
+  <!-- Copyright 2023 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
+</div>
